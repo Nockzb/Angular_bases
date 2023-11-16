@@ -1,0 +1,23 @@
+<div class="container mt-4">
+  <h1 class="display-4">Centros Educativos</h1>
+
+  <dl class="row">
+    <dt class="col-sm-3 fw-bold">Centro:</dt>
+    <dd class="col-sm-9">{{ centroEducativo }}</dd>
+
+    <dt class="col-sm-3 fw-bold">Localidad:</dt>
+    <dd class="col-sm-9">{{ localidad }}</dd>
+
+    <dt class="col-sm-3 fw-bold">Familia Profesional:</dt>
+    <dd class="col-sm-9">{{ familiasProfesionalesCentro }}</dd>
+
+    <dt class="col-sm-3 fw-bold">Logo:</dt>
+    <dd class="col-sm-9">
+      <img src="{{ logo }}" alt="Logo del centro" class="img-fluid rounded" />
+    </dd>
+  </dl>
+
+  <button class="btn btn-primary" (click)="cambiarCentro()">
+    Cambiar Centro Educativo
+  </button>
+</div>

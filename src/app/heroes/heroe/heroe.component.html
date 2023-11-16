@@ -1,0 +1,22 @@
+<h1>Goku</h1>
+<dl>
+  <td>Nombre:</td>
+  <dd> {{nombre}} </dd>
+
+  <td>Edad:</td>
+  <dd> {{edad}} </dd>
+
+  <td>Método:</td>
+  <dd> {{descripcionHeroe}} </dd>
+
+  <td>Capitalizado:</td>
+  <dd> {{nombreCapitalizado}} </dd>
+</dl>
+
+<button class="btn btn-primary" (click)="cambiarNombre('nuevo')">
+  Cambiar nombre
+</button>
+
+<button class="btn btn-primary" (click)="cambiarEdad(85)">
+  Cambiar edad
+</button>
