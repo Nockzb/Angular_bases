@@ -2,13 +2,7 @@ import { Component } from '@angular/core';
 
 @Component ({
   selector: 'app-contador',
-  template: `<h1>{{ title }}</h1>
-    <h3>Contador: {{ contador }}</h3>
-    <button (click)="decrementaPor(1)">-1</button>
-    <button (click)="resetContador()">Reset</button>
-    <button (click)="incrementaPor(1)">+1</button>
-    <hr>
-  `
+  templateUrl: './contador.component.html'
 })
 
 export class ContadorComponent {

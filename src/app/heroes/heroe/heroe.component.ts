@@ -29,4 +29,9 @@ export class HeroeComponent implements OnInit {
   public cambiarEdad(nuevaEdad: number): void {
     this.edad = nuevaEdad;
   }
+
+  public restablecerValores(): void {
+    this.edad = 34;
+    this.nombre = 'Gokuu';
+  }
 }

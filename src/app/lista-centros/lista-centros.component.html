@@ -1,0 +1,58 @@
+<div class="container mt-4">
+  <h1 class="display-4">Centros Educativos</h1>
+
+  <div class="row">
+    <div *ngIf="mostrarPosicion; else noPosicion" class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-3 fw-bold">Posición:</div>
+        <div class="col-sm-9">{{ indiceCentroActual + 1 }}</div> <!-- se agrega +1 para que el primer centro no sea el '0' -->
+      </div>
+    </div>
+
+    <ng-template #noPosicion>
+      <!-- no mostrar nada hastas que no se presiona el boton posicion -->
+    </ng-template>
+
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-3 fw-bold">Centro:</div>
+        <div class="col-sm-9">{{ centroActual.nombre }}</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-3 fw-bold">Localidad:</div>
+        <div class="col-sm-9">{{ centroActual.localidad }}</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-3 fw-bold">Familia Profesional:</div>
+        <div class="col-sm-9">{{ centroActual.familiasProfesionales.join(', ') }}</div>
+      </div>
+    </div>
+
+    <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-3 fw-bold">Logo:</div>
+        <div class="col-sm-9">
+          <img src="{{ centroActual.logo }}" alt="Logo del centro" class="img-fluid rounded" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-sm-12">
+      <div class="btn-group" role="group" aria-label="Botones de navegación">
+        <button *ngIf="indiceCentroActual > 0" class="btn btn-secondary mx-2" (click)="retroceder()">&#60; ANTERIOR</button>
+        <button class="btn btn-danger mx-2" (click)="eliminarCentro()">ELIMINAR</button>
+        <button class="btn btn-secondary mx-2" (click)="getPosicion()">POSICIÓN</button>
+        <button class="btn btn-secondary mx-2" (click)="insertar()">INSERTAR</button>
+        <button *ngIf="indiceCentroActual < (arrayCentros.length - 1)" class="btn btn-secondary mx-2" (click)="avanzar()">POSTERIOR ></button>
+      </div>
+    </div>
+  </div>
+</div>

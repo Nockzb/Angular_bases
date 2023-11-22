@@ -13,10 +13,14 @@
   <dd> {{nombreCapitalizado}} </dd>
 </dl>
 
-<button class="btn btn-primary" (click)="cambiarNombre('nuevo')">
+<button *ngIf="nombre === 'Gokuu'" class="btn btn-primary mx-2" (click)="cambiarNombre('nuevo')">
   Cambiar nombre
 </button>
 
-<button class="btn btn-primary" (click)="cambiarEdad(85)">
+<button *ngIf="edad === 34" class="btn btn-primary mx-2" (click)="cambiarEdad(85)">
   Cambiar edad
+</button>
+
+<button *ngIf="edad !== 34 || nombre !== 'Gokuu'" class="btn btn-primary" (click)="restablecerValores()">
+  Restablecer valores
 </button>
