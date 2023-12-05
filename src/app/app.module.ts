@@ -8,10 +8,10 @@ import { AppComponent } from './app.component';
 import { IESPlayamarComponent } from './centroEducativo/iesplayamar/iesplayamar.component';
 import { DbzModule } from './dbz/dbz.module';
 
-
 @NgModule({
   declarations: [
-    AppComponent, IESPlayamarComponent
+    AppComponent, 
+    IESPlayamarComponent 
   ],
   imports: [
     BrowserModule,
