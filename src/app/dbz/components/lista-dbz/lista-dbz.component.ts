@@ -7,8 +7,6 @@ import { Personaje } from '../../interfaces/personaje.interface';
   styleUrls: ['./lista-dbz.component.css']
 })
 
-
-
 export class ListaDbzComponent {  
   @Input()
   public listaPersonajesDbz: Personaje[] = []
