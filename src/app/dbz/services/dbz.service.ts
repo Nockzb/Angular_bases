@@ -25,7 +25,7 @@ export class DbzService {
         }
     ];
 
-    public onNewPersonaje(pers: Personaje): void {
+    public addPersonaje(pers: Personaje): void {
       const newPersonaje: Personaje = { ...pers, id: uuid() } //Añadir el objeto 'pers'
       this.grupoPersonajes.push(newPersonaje)
     }
