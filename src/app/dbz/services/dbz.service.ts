@@ -35,7 +35,7 @@ export class DbzService {
     //     this.grupoPersonajes.splice(index, 1);
     // }
 
-    public onDeletePersonajebyId(id: string): void {
+    public deletePersonajebyId(id: string): void {
       // Se almacena el personaje borrado para mostrarlo por consola
       const personajeBorrado = this.grupoPersonajes.find(personaje => personaje.id === id);
 

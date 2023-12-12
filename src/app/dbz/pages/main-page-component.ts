@@ -15,7 +15,7 @@ export class MainPageComponent {
     }
 
     onDeletePersonaje(id:string): void {
-        this.dbzService.onDeletePersonajebyId(id);
+        this.dbzService.deletePersonajebyId(id);
     }
 
     onNewPersonaje(personaje: Personaje): void {
