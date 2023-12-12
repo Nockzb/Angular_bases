@@ -7,14 +7,18 @@ import { Personaje } from '../../interfaces/personaje.interface';
   styleUrls: ['./lista-dbz.component.css']
 })
 
-export class ListaDbzComponent {  
+export class ListaDbzComponent {
   @Input()
   public listaPersonajesDbz: Personaje[] = []
 
   @Output()
-  public onDeletePersonaje: EventEmitter<number> = new EventEmitter();
+  public onDeletePersonaje: EventEmitter<string> = new EventEmitter();
 
-  public deletePersonaje(indice:number): void {
-    this.onDeletePersonaje.emit(indice);
+  // public deletePersonaje(indice:number): void {
+  //   this.onDeletePersonaje.emit(indice);
+  // }
+
+  public deletePersonajeporId(id: string): void {
+    this.onDeletePersonaje.emit(id);
   }
 }

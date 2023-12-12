@@ -2,14 +2,14 @@
 <hr>
 <div class="row">
     <div class="col">
-        <dbz-lista 
-            [listaPersonajesDbz]="dbzService.grupoPersonajes" 
-            (onDeletePersonaje)="dbzService.onDeletePersonaje($event)">
+        <dbz-lista
+            [listaPersonajesDbz]="dbzService.grupoPersonajes"
+            (onDeletePersonaje)="dbzService.onDeletePersonajebyId($event)">
         </dbz-lista>
     </div>
 
     <div class="col">
-        <dbz-add-personaje 
+        <dbz-add-personaje
             (onNewPersonaje)="dbzService.onNewPersonaje($event)">
         </dbz-add-personaje>
     </div>

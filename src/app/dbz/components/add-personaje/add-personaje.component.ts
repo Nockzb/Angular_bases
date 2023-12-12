@@ -13,12 +13,13 @@ export class AddPersonajeComponent {
 
   public personaje: Personaje = {
     nombre: '',
-    fuerza: null
+    fuerza: null,
+    id: ''
   }
 
   public addPersonaje(): void {
-    this.onNewPersonaje.emit(this.personaje)    
+    this.onNewPersonaje.emit(this.personaje)
 
-    this.personaje = {nombre: '', fuerza: null}    
+    this.personaje = {nombre: '', fuerza: null, id: ''}
   }
 }
